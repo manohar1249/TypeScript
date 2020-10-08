@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Television</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <style>
+            .vid{
+                background-repeat: no-repeat;
+                background-attachment: fixed; 
+                background-size: 100% 100%;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container" id="con">
+            <label for="tv's">Choose a TV:</label>
+            <select name="tv's" id="tv">
+              <option value="Led">LED</option>
+              <option value="Plasma">PLASMA</option>
+            </select></br>
+            <input type="submit" value="get tv" onclick="myFun()">
+            <div class="row" id="r2">
+                <div class="col-8 vid" id="vedio"></div>
+                <div class="col-4" id="remote">
+                    <img src="remote.jpg" alt="Workplace" style="height: 300px;" usemap="#workmap">
+                    <map name="workmap">
+                        <area shape="rect" coords="20,170,30,190" onclick="channeldown()">
+                        <area shape="rect" coords="70,170,90,190" onclick="channelup()">
+                        <area shape="rect" coords="45,140,60,160" onclick="volumeup()">
+                        <area shape="rect" coords="45,190,60,210" onclick="volumedown()">
+                    </map>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="tv.js"></script>
+    </body>
+</html>
